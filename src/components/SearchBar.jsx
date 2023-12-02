@@ -12,7 +12,7 @@ function SearchBar() {
               placeholder="mekan, etkinlik, sanatçı ara"
             />
             {/* Mobilde burası gizli */}
-            <div className="flex  w-full h-full text-xs">
+            <div className="flex  w-full h-full text-sm text-center">
             <select className="w-full h-full sm:h-full  bg-transparent border border-red-400" id="">
                 <option value="">Tüm Kategoriler</option>
                 <option value="">Konser</option>
