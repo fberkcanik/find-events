@@ -2,17 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function PopularEvents() {
-  const [events, setEvents] = useState([]);
-  useEffect(() => {
-    axios.get("https://api.fullstacksamurai.online/events").then((res) => {
-      setEvents(res.data);
-    });
-  }, []);
+function EventsBlock(eventType) {
+ const events = [];
   return (
     <>
       <div className="flex flex-row mb-5 mt-5 sm:px-24 px-5 justify-between items-center ">
-        <h1 className="text-3xl font-bold">Öne Çıkan Etkinlikler</h1>
+        <h1 className="text-3xl font-bold">eventType Etkinlikler</h1>
         {/* link to all */}
         <Link to={"/"} className="text-sm font-semibold text-red-500">
           {" "}
@@ -56,4 +51,4 @@ function PopularEvents() {
   );
 }
 
-export default PopularEvents;
+export default EventsBlock;
