@@ -17,7 +17,7 @@ function EventsBlock(eventType) {
       </div>
       <div className="w-[100%] flex justify-center px-5 sm:px-24 mb-10">
         {/* Manual card responsive */}
-        <div className="flex flex-col sm:flex-row justify-center md:flex-col lg:flex-row items-center space-y-5 sm:space-y-0 sm:space-x-5 w-full">
+        <div className="flex flex-col sm:flex-row justify-center md:flex-col lg:flex-row items-center space-y-5 space-x-5 md:space-x- md:space-y-4 5 sm:space-y-0 sm:space-x-5 w-full">
           {events.slice(0, 5).map((event) => (
             <div className="w-full sm:w-[300px] h-[300px] sm:h-[250px] md:w-full bg-white rounded-md shadow-md flex flex-col justify-center items-center">
               <img
@@ -25,7 +25,7 @@ function EventsBlock(eventType) {
                 src={event.coverImg}
                 alt=""
               />
-              <div className="flex flex-col justify-center items-center w-full h-full">
+              <div className="flex flex-col justify-center items-center w-full h-full p-2 sm:p-2">
                 <h1 className="text-sm font-semibold text-gray-800">
                   {event.name}
                 </h1>
