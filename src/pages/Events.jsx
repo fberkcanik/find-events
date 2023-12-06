@@ -35,14 +35,9 @@ function Events() {
         </div>
         <FilterBar />
         <div className="w-full sm:px-24 py-4">
-          <div className="grid sm:grid-cols-4 gap-1 sm:gap-4 grid-cols-1">
-            <div className="col-span-1 space-y-2">
-              <div className="w-full h-full bg-gray-100 p-3 rounded-md">
-                {/* additional filters */}
-                Additional filters here
-              </div>
-            </div>
-            <div className="col-span-3 space-y-2 h-full">
+          <div className="grid sm:grid-cols-4 gap-2 sm:gap-4 grid-cols-1">
+           
+            <div className="col-span-4 space-y-2 h-full">
               <div className="h-full bg-gray-100 rounded-md p-3 overflow-y-hidden mb-24 sm:mb-0 sm:pb-10">
                 <div className="flex flex-wrap h-screen gap-3 overflow-y-scroll">
                   {!isLoaded ? (
