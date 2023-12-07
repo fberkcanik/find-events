@@ -1,29 +1,33 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import MenuItems from "./MenuItems";
 import FooterButtons from "./FooterButtons";
 import SocialButtons from "./SocialButtons";
+import { Link } from "react-router-dom";
+import { FavContext } from "../context/FavoriteContext";
+
 function Footer() {
+  const [favs, setFavs] = useContext(FavContext);
   return (
     <>
       <div className="bottom-0 h-16 fixed bg-red-500 w-full sm:hidden z-20">
         {/* Mobil menü icons */}
         <div className="flex flex-row justify-around items-center h-full">
-          <div className="flex flex-col items-center justify-center">
+          <Link to={'/'} className="flex flex-col items-center justify-center">
             <i className="fas fa-home text-white text-2xl"></i>
             <p className="text-white text-xs">Anasayfa</p>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <i className="fas fa-search text-white text-2xl"></i>
-            <p className="text-white text-xs">Ara</p>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <i className="fas fa-plus text-white text-2xl"></i>
-            <p className="text-white text-xs">Etkinlik Ekle</p>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <i className="fas fa-user text-white text-2xl"></i>
-            <p className="text-white text-xs">Profil</p>
-          </div>
+          </Link>
+          <Link to={'/events'} className="flex flex-col items-center justify-center">
+            <i className="fas fa-ticket text-white text-2xl"></i>
+            <p className="text-white text-xs">Etkinlikler</p>
+          </Link>
+          <Link to={'locations'} className="flex flex-col items-center justify-center">
+            <i className="fas fa-location text-white text-2xl"></i>
+            <p className="text-white text-xs">Lokasyonlar</p>
+          </Link>
+          <Link to={'/favorites'} className="flex flex-col items-center justify-center">
+            <i className="fas fa-heart text-white text-2xl"></i>
+            <p className="text-white text-xs">Favorilerim ({favs.length}) </p>
+          </Link>
         </div>
       </div>
       <div className="hidden sm:flex z-50">

@@ -22,8 +22,10 @@ function Home() {
     <CallToAction/>
     <EventsBlock/>
 
-    </div>
+    
    
+    
+    </div>
     <Footer/>
     </div>
    

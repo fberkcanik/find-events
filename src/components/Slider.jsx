@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Splash from "./Splash";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 function Slider() {
@@ -37,12 +38,14 @@ function Slider() {
                 key={index}
               >
                 {index === current && (
+                  <Link to={`/events/${slide.id}`}>
                   <img
                     onLoad={() => setIsLoading(false)}
                     src={slide.sliderImg}
                     alt="slider"
                     className="h-full w-screen object-fill aspect-auto opacity-80"
                   />
+                  </Link>
                 )}
               </div>
             );
