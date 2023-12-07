@@ -4,6 +4,7 @@ import NotFound from "./pages/NotFound";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import Location from "./pages/Location";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/events" element={<Events />} />
       <Route path="/locations" element={<Location />} />
       <Route path="/events/:id" element={<EventDetail />} />
+      <Route path="/favorites" element={<Favorites />} />
       <Route path="*" element={<NotFound/>} />
     </Routes>
   );
